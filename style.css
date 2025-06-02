@@ -1,66 +1,42 @@
-/* Style body dan judul */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-  margin: 0;
-  padding: 20px;
-  text-align: center;
-  color: #333;
-}
-
-h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #fff;
-  text-shadow: 2px 2px 6px #ff6f91;
-}
-
-/* Container gallery */
-.gallery {
+.galeri-vertikal {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px; /* jarak antar foto */
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-height: 80vh; /* batas tinggi scroll */
+  overflow-y: auto; /* scroll vertikal */
+  padding-right: 10px;
   margin-top: 30px;
+  scrollbar-width: thin;
+  scrollbar-color: #ff6f91 #ffd6de;
 }
 
-/* Style foto supaya ukuran sama, sudut tumpul, dan rapi */
-.gallery img.zoomable {
-  width: 180px;           /* ukuran lebar */
-  height: 180px;          /* ukuran tinggi supaya kotak */
-  object-fit: cover;      /* biar foto gak melar dan pas */
-  border-radius: 20px;    /* sudut tumpul */
-  cursor: pointer;
+/* Styling scrollbar untuk Chrome, Edge, Safari */
+.galeri-vertikal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.galeri-vertikal::-webkit-scrollbar-track {
+  background: #ffd6de;
+  border-radius: 10px;
+}
+
+.galeri-vertikal::-webkit-scrollbar-thumb {
+  background-color: #ff6f91;
+  border-radius: 10px;
+}
+
+.galeri-vertikal img.zoomable {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
   box-shadow: 0 8px 15px rgba(255, 111, 145, 0.3);
+  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery img.zoomable:hover {
-  transform: scale(1.1);
+.galeri-vertikal img.zoomable:hover {
+  transform: scale(1.05);
   box-shadow: 0 15px 25px rgba(255, 111, 145, 0.6);
-}
-
-/* Modal fullscreen buat foto */
-.modal {
-  display: none; /* awalnya hidden */
-  position: fixed;
-  z-index: 9999;
-  padding-top: 60px;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.85);
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 20px;
-  box-shadow: 0 0 30px 8px #ff6f91;
-}
-
-.modal:hover {
-  cursor: pointer;
 }

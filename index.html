@@ -9,30 +9,41 @@
 <body>
   <header>
     <h1>✨AKNPACARKU✨</h1>
-    
   </header>
 
   <section class="foto-section">
-  <section class="foto-section">
-  <h2>💖💖💖💖💖💖💖💖💖💖💖💖💖</h2>
-  
-  <div class="galeri-vertikal">
-    <img src="foto/10.jpg" alt="Foto 1" />
-    <img src="foto/2.jpg" alt="Foto 2" />
-    <img src="foto/5.jpg" alt="Foto 3" />
-    <img src="foto/4.jpg" alt="Foto 4" />
-    <img src="foto/6.jpg" alt="Foto 1" />
-    <img src="foto/7.jpg" alt="Foto 2" />
-    <img src="foto/8.jpg" alt="Foto 3" />
-    <img src="foto/9.jpg" alt="Foto 4" />
-    <!-- tambahin foto lagi tinggal copy baris ini -->
-  </div>
-  <div id="modal" class="modal" onclick="closeModal()">
-  <img class="modal-content" id="modal-img" />
+    <h2>💖💖💖💖💖💖💖💖💖💖💖💖💖</h2>
+   <div class="galeri-vertikal">
+  <img src="foto/10.jpg" alt="Foto 1" class="zoomable" onclick="openModal(this)" />
+  <img src="foto/2.jpg" alt="Foto 2" class="zoomable" onclick="openModal(this)" />
+  <img src="foto/5.jpg" alt="Foto 3" class="zoomable" onclick="openModal(this)" />
+  <img src="foto/4.jpg" alt="Foto 4" class="zoomable" onclick="openModal(this)" />
+  <img src="foto/6.jpg" alt="Foto 5" class="zoomable" onclick="openModal(this)" />
+  <img src="foto/7.jpg" alt="Foto 6" class="zoomable" onclick="openModal(this)" />
+  <img src="foto/8.jpg" alt="Foto 7" class="zoomable" onclick="openModal(this)" />
+  <img src="foto/9.jpg" alt="Foto 8" class="zoomable" onclick="openModal(this)" />
 </div>
-</section>
-   <footer>
+
+
+    <div id="modal" class="modal" onclick="closeModal()">
+      <img class="modal-content" id="modal-img" />
+    </div>
+  </section>
+
+  <footer>
     <p>dibuat penuh cinta oleh pacar aku 💖</p>
   </footer>
+
+  <script>
+    // buka modal dan ganti gambar
+    function openModal(elem) {
+      document.getElementById("modal").style.display = "block";
+      document.getElementById("modal-img").src = elem.src;
+    }
+    // tutup modal
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
 </body>
 </html>
