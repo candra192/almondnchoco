@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to bottom, #ffe3f1, #fdf6ff);
+  color: #6c3c7e;
+  text-align: center;
+  padding: 2rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ff69b4;
+  text-shadow: 2px 2px #fff0f5;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.foto-section {
+  background-color: #ffffffaa;
+  border: 2px dashed #ffa3cb;
+  padding: 1.5rem;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 16px rgba(255, 182, 193, 0.4);
+}
+
+.my-photo {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 30px;
+  margin-top: 1rem;
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.my-photo:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #a96fc1;
+}
+.galeri-vertikal {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.galeri-vertikal img {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(255, 192, 203, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+.galeri-vertikal img:hover {
+  transform: scale(1.03);
+}
+
